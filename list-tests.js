@@ -114,3 +114,23 @@ QUnit.test("Check to see if two list are equal", function (assert) {
   assert.ok(l.equals(m),"lists are equal")
 });
 
+QUnit.test("Reverse a list", function(assert){
+
+  var l = new List();
+  var m = new List();
+  l.reverse();
+  assert.ok(l.equals(m), "The list is reversed");
+
+  l.add("a")
+  l.add("b")
+  l.add("c")
+
+  l.reverse()
+
+  m.add("a")
+  m.add("b")
+  m.add("c")
+
+  assert.ok(m.equals(l), "The list is reversed")  
+
+});

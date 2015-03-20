@@ -106,13 +106,42 @@ var List = function() {
           bool = false
         }
 
-         temp1 = temp1.tail
-        temp2 = temp2.tail
+       temp1 = temp1.tail
+       temp2 = temp2.tail
 
         }
 
       return bool
 
+    }
+  }
+
+  this.reverse = function(){
+
+    if(this.empty){
+      return null;
+    }
+    else if(this.length === 1){
+      return this.item;
+    }
+    else{
+
+      var hold = this.last();
+      var reversing = new List();
+      var temp = this.item;
+      
+      do{
+        if(temp.tail.data === hold ){
+          reversing.add(hold);
+          hold = temp.data;
+          temp = this.item;
+        }
+        temp = temp.tail;
+      }
+      while(this.last() !== reversing.head());
+
+        this.item = reversing.head();
+        return this.item
     }
   }
 
