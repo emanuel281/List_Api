@@ -125,8 +125,6 @@
 		else{
 
 			var reversing = new List();
-			console.log(typeof reversing)
-
 
 			while(!this.empty()){
 
