@@ -12,7 +12,7 @@
 	this.add = function(elem) {
 	//this.item = new ListItem(elem, this.item)
 	this.item = new ListItem(elem, this.item)
-}
+	}
 
 	// Returns true if the list is empty
 	this.empty = function() {

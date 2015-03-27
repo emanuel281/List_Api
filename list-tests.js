@@ -1,6 +1,6 @@
 var to_req = require("./list.js")
 
-QUnit.test("A new to_req.List is empty", function (assert) {
+QUnit.test("A new List is empty", function (assert) {
 	var l = new to_req.to_req.List()
 
 	assert.equal(l.empty(), true)
@@ -10,7 +10,7 @@ QUnit.test("A new to_req.List is empty", function (assert) {
 
 });
 
-QUnit.test("It is really a to_req.List", function (assert) {
+QUnit.test("It is really a List", function (assert) {
   var l = new to_req.List()
   l.add("a")
   l.add("b")
@@ -25,7 +25,7 @@ QUnit.test("It is really a to_req.List", function (assert) {
   assert.equal(l.item.tail.tail.tail, null, "Expected 'null'")
 });
 
-QUnit.test("Head of the to_req.List contains most recent addition", function (assert) {
+QUnit.test("Head of the List contains most recent addition", function (assert) {
   var l = new to_req.List()
   l.add("a")
   assert.equal(l.head(), "a")
@@ -37,7 +37,7 @@ QUnit.test("Head of the to_req.List contains most recent addition", function (as
 });
 
 
-QUnit.test("Returns the correct length of a to_req.List", function (assert) {
+QUnit.test("Returns the correct length of a List", function (assert) {
   var l = new to_req.List()
   assert.equal(l.length(), 0)
   l.add("a")
@@ -62,7 +62,7 @@ QUnit.test("Returns the correct length of a to_req.List", function (assert) {
 });
 
 
-QUnit.test("Pop gets the most recent element off the to_req.List", function (assert) {
+QUnit.test("Pop gets the most recent element off the List", function (assert) {
   var l = new to_req.List()
   l.add("a")
   l.add("b")
@@ -88,7 +88,7 @@ QUnit.test("Pop gets the most recent element off the to_req.List", function (ass
 
 
 
-QUnit.test("Returns the last element in the to_req.List", function (assert) {
+QUnit.test("Returns the last element in the List", function (assert) {
   var l = new to_req.List()
   assert.equal(l.last(), null)
   l.add("a")
@@ -98,11 +98,11 @@ QUnit.test("Returns the last element in the to_req.List", function (assert) {
   assert.equal(l.length(), 3)
 });
 
-QUnit.test("Check to see if two to_req.List are equal", function (assert) {
+QUnit.test("Check to see if two List are equal", function (assert) {
   var l = new to_req.List()
   var m = new to_req.List()
 
-  assert.ok(l.equals(m), "to_req.Lists are equal")
+  assert.ok(l.equals(m), "Lists are equal")
   l.add("a")
   l.add("b")
   l.add("c")
@@ -110,7 +110,7 @@ QUnit.test("Check to see if two to_req.List are equal", function (assert) {
   m.add("a")
   m.add("b")
   m.add("c")
-  assert.ok(l.equals(m),"to_req.Lists are equal")
+  assert.ok(l.equals(m),"Lists are equal")
 });
 
 QUnit.test("Reverse a to_req.List", function(assert){
@@ -118,7 +118,7 @@ QUnit.test("Reverse a to_req.List", function(assert){
   var l = new to_req.List();
   var m = new to_req.List();
   l.reverse();
-  assert.ok(l.equals(m), "The to_req.List is reversed");
+  assert.ok(l.equals(m), "The List is reversed");
 
   l.add("a")
   l.add("b")
@@ -130,11 +130,11 @@ QUnit.test("Reverse a to_req.List", function(assert){
   m.add("b")
   m.add("a")
 
-  assert.ok(m.equals(l), "The to_req.List is reversed")  
+  assert.ok(m.equals(l), "The List is reversed")  
 
 });
 
-QUnit.test("Merge two to_req.Lists", function(assert){
+QUnit.test("Merge two Lists", function(assert){
 
   var l = new to_req.List();
   var m = new to_req.List();
@@ -159,6 +159,6 @@ QUnit.test("Merge two to_req.Lists", function(assert){
   o.add("2")
   o.add("1")
 
-  assert.ok(o.equals(l), "The to_req.List is are the same")  
+  assert.ok(o.equals(l), "The Lists are the same")  
 
 });
