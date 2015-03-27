@@ -1,16 +1,15 @@
 {
-  "name": "Data Structures: Lists",
+  "name": "Lists",
   "version": "0.0.0",
   "description": "##Required tutorials to be completed:",
-  "main": "gulpfile.js",
+  "main": "list.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "qunit -c list.js -t list-tests.js"
   },
   "author": "Laurrain && Emanuel",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.8.8",
-    "gulp-qunit": "^1.2.1"
+    "qunit": "~0.7.5"
   },
   "repository": {
     "type": "git",
