@@ -134,3 +134,32 @@ QUnit.test("Reverse a list", function(assert){
   assert.ok(m.equals(l), "The list is reversed")  
 
 });
+
+QUnit.test("Merge two lists", function(assert){
+
+  var l = new List();
+  var m = new List();
+
+  l.add("a")
+  l.add("b")
+  l.add("c")
+
+  m.add("1")
+  m.add("2")
+  m.add("3")
+
+  l.merge(m)
+
+  var o = new List();
+
+
+  o.add("a")
+  o.add("b")
+  o.add("c")
+  o.add("3")
+  o.add("2")
+  o.add("1")
+
+  assert.ok(o.equals(l), "The list is are the same")  
+
+});

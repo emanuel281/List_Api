@@ -137,11 +137,42 @@ var List = function() {
           temp = this.item;
         }
         temp = temp.tail;
-      }
-      while(this.last() !== reversing.head());
+      
+      }while(this.last() !== reversing.head());
 
         this.item = reversing.head();
         return this.item
+    }
+  }
+
+  this.merge = function(anotherList){
+    var temp = anotherList.item;
+
+    if(anotherList.empty()){
+      return this.item
+    }
+    else if(this.empty()){
+      this.item = anotherList.item;
+      return this.item
+    }
+    else{
+      while(temp !== null){
+        var temp_this = this.item;
+        var track = 0;
+
+        while(temp_this !== null){
+          if(temp_this.data === temp.data){
+            track++;
+          }
+          temp_this = temp_this.tail;
+        }
+
+        if(track === 0){
+          this.add(temp.data)
+        }
+
+        temp = temp.tail;
+      }
     }
   }
 
