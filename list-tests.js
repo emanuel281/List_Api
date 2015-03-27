@@ -1,4 +1,4 @@
-var to_req = require("./to_req.List.js")
+var to_req = require("./list.js")
 
 QUnit.test("A new to_req.List is empty", function (assert) {
 	var l = new to_req.to_req.List()
